@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #d309e1 0%, rgb(156, 26, 255) 100%);
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#toggle {
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+    border: 0px;
+    background: white;
+    font-size: 10em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transform: scale(1);
+    transition: 0.2s ease;
+}
+
+#toggle:hover {
+    transform: scale(1.5);
+    transition: 0.5s ease;
+}
+
+#toggle:active {
+    transform: scale(1.7);
+    transition: 0.1s ease;
+}
