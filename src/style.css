@@ -32,6 +32,6 @@ body {
 }
 
 #toggle:active {
-    transform: scale(1.15);
+    transform: scale(0.90);
     transition: 0.1s ease;
 }
