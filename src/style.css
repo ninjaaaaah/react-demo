@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:500');
+
 body {
     margin: 0;
-    background: linear-gradient(180deg, #d309e1 0%, rgb(156, 26, 255) 100%);
+    /* background: linear-gradient(180deg, #d309e1 0%, rgb(156, 26, 255) 100%); */
+    background: #ffecd9;
+    font: Raleway, sans-serif;
 }
 
 #app {
@@ -13,25 +17,32 @@ body {
     align-content: center;
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-content: center;
+}
+
 #toggle {
-    height: 150px;
     width: 300px;
+    height: 5rem;
     margin: 20px;
-    border-radius: 40px;
-    border: 0px;
-    background: white;
-    font-size: 3em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    transform: scale(1);
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    background: linear-gradient(to right,#a2ccb6 0%,#fceeb5 50%,#ee786e 100%);
+    background-size: 500%;
+    font-size: 1.5em;
     transition: 0.2s ease;
+    color: white;
 }
 
-#toggle:hover {
-    transform: scale(1.1);
-    transition: 0.5s ease;
-}
-
-#toggle:active {
-    transform: scale(0.90);
-    transition: 0.1s ease;
+#display {
+    width: 90vw;
+    height: 80vh;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
