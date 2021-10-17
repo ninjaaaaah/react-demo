@@ -1,0 +1,126 @@
+// @import url(https://fonts.googleapis.com/css?family=Raleway:500);
+
+// SASS variables
+$maincolor: rgb(255, 89, 89);
+$accentcolor: blue;
+
+body {
+    margin: 0;
+    /* background: linear-gradient(180deg, #d309e1 0%, rgb(156, 26, 255) 100%); */
+    background: #ffecd9;
+    font-family: Raleway, sans-serif;
+    overflow-x: hidden;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#toggle {
+    width: 300px;
+    height: 5rem;
+    margin: 20px;
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background: linear-gradient(
+        to right,
+        #a2ccb6 0%,
+        #fceeb5 50%,
+        #ee786e 100%
+    );
+    background-size: 500%;
+    font-size: 1.5em;
+    transition: 0.2s ease;
+    color: white;
+}
+
+#display {
+    width: 22vw;
+    height: 80vh;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 10px 30px;
+}
+
+#photo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#avatar {
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0 0 10px 0;
+    height: 128px;
+    width: 128px;
+}
+
+#name {
+    color: $maincolor;
+    margin: 5px 0;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#email {
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 20px 0;
+    font-weight: bolder;
+    background-color: $maincolor;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-size: 1.25em;
+}
+
+#card-container {
+    position: relative;
+    width: 500px;
+    height: 300px;
+}
+
+.card {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}

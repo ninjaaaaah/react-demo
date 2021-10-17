@@ -1,45 +1,31 @@
-import React from "react"
-import {motion} from "framer-motion"
-import Button from './Button'
+import React from "react";
+import { motion } from "framer-motion";
+import CardContainer from "./CardContainer";
+import Events from "./Events.js";
+// import Button from './Button'
 
-const hover = { scale: 1.1, backgroundPosition: [`0%`,`100%`]};
+const hover = { scale: 1.1, backgroundPosition: [`0%`, `100%`] };
 
 export default class App extends React.Component {
-    state = {
-        profile: null
-    }
-
-    fetchProfile = async _ => {
-        const profile = (await (await fetch('https://randomuser.me/api')).json()).results[0];
-        this.setState({profile});
-        console.log(this.state.profile);
-    }
+    broadcastEvent = () => {
+        Events.dispatch("generate");
+    };
 
     render() {
-        this.fetchProfile;
-        console.log(this.state.profile);
-        return(
+        return (
             <>
-                <motion.div 
-                    id="container"
-                    drag="x"
-                    dragConstraints={{ left: 0, right: 0 }}
-                    >
+                <motion.div id="container">
                     <motion.button
                         id="toggle"
                         whileHover={hover}
                         whileTap={{ scale: 0.9 }}
-                        onClick={this.fetchProfile}
+                        onClick={this.broadcastEvent}
                     >
                         GENERATE
                     </motion.button>
                 </motion.div>
-                <motion.div id="display">
-                    {
-                        this.state.profile && <img src={this.state.profile.picture.large} /> 
-                    }
-                </motion.div>
+                <CardContainer />
             </>
-        )
+        );
     }
 }
