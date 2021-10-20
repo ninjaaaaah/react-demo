@@ -1,28 +1,32 @@
-import React from "react"
-import {motion} from "framer-motion"
+import React from "react";
+import { motion } from "framer-motion";
+import { SiBreaker } from "react-icons/si";
 
 export default class Profile extends React.Component {
-    render () {
+    render() {
         const data = this.props.data;
         return (
             <>
                 <motion.nav>
-                    <motion.div id='title'>
-                        Barf
+                    <motion.div id="title">
+                        <SiBreaker /> Barf
                     </motion.div>
                 </motion.nav>
                 <motion.div id="profile">
                     <motion.div id="photo">
-                        <motion.div style={{backgroundImage: `url(${data.picture.large})`}} id="avatar"/>
+                        <motion.div
+                            style={{
+                                backgroundImage: `url(${data.picture.large})`,
+                            }}
+                            id="avatar"
+                        />
                     </motion.div>
                     <motion.div id="name">
-                        {data.name.first + ' ' + data.name.last}
+                        {data.name.first + " " + data.name.last}
                     </motion.div>
-                    <motion.div id="email">
-                        {data.email}
-                    </motion.div>
+                    <motion.div id="email">{data.email}</motion.div>
                 </motion.div>
             </>
-        )
+        );
     }
 }

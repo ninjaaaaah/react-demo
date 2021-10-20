@@ -7,7 +7,7 @@ const hover = { scale: 1.1, backgroundPosition: [`0%`, `100%`] };
 const variants = {
     enter: () => {
         return {
-            scale: 0,
+            scale: 0.5,
         };
     },
     load: () => {
