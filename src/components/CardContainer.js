@@ -1,17 +1,15 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Card } from "./Card";
 import Events from "./Events.js";
 
 const hiddenProfile = {
     visibility: `hidden`,
     height: 0,
-    width: 0,
 };
 const shownProfile = {
     visibility: `unset`,
     height: `300px`,
-    width: `500px`,
 };
 
 export default class CardContainer extends React.Component {
@@ -54,20 +52,25 @@ export default class CardContainer extends React.Component {
 
     render() {
         let profiles = this.state.profiles;
-        console.log(profiles);
         return (
-            <motion.div id="card-container">
-                {profiles &&
-                    profiles.map((profile, i) => (
-                        <Card
-                            profile={profile}
-                            key={profile.login.uuid}
-                            index={i}
-                            animate={profile ? shownProfile : hiddenProfile}
-                            remove={this.removeChild}
-                        />
-                    ))}
-            </motion.div>
+            <AnimatePresence>
+                {profiles && (
+                    <motion.div
+                        id="card-container"
+                        animate={profiles ? shownProfile : hiddenProfile}
+                    >
+                        {profiles &&
+                            profiles.map((profile, i) => (
+                                <Card
+                                    profile={profile}
+                                    key={profile.login.uuid}
+                                    index={i}
+                                    remove={this.removeChild}
+                                />
+                            ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         );
     }
 }
