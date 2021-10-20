@@ -8,23 +8,23 @@ export default class Profile extends React.Component {
         return (
             <>
                 <motion.nav>
-                    <motion.div id="title">
+                    <motion.div className="title">
                         <SiBreaker /> Barf
                     </motion.div>
                 </motion.nav>
-                <motion.div id="profile">
-                    <motion.div id="photo">
+                <motion.div className="profile">
+                    <motion.div className="photo">
                         <motion.div
                             style={{
                                 backgroundImage: `url(${data.picture.large})`,
                             }}
-                            id="avatar"
+                            className="avatar"
                         />
                     </motion.div>
-                    <motion.div id="name">
+                    <motion.div className="name">
                         {data.name.first + " " + data.name.last}
                     </motion.div>
-                    <motion.div id="email">{data.email}</motion.div>
+                    <motion.div className="email">{data.email}</motion.div>
                 </motion.div>
             </>
         );

@@ -8,11 +8,11 @@ export default class Details extends React.Component {
         return (
             <>
                 <motion.nav>
-                    <motion.div id="title-alt">
+                    <motion.div className="title-alt">
                         <SiBreaker /> Barf
                     </motion.div>
                 </motion.nav>
-                <motion.div id="details">
+                <motion.div className="details">
                     <motion.span>{"GENDER:\t" + data.gender}</motion.span>
                     <motion.span>
                         {"BIRTHDAY:\t" + data.dob.date.substring(0, 10)}

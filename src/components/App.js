@@ -1,5 +1,4 @@
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import CardContainer from "./CardContainer";
 import Button from "./Button";
 

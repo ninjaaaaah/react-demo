@@ -72,8 +72,11 @@ export default class CardContainer extends React.Component {
                                 ))}
                         </motion.div>
                         <motion.div id="tooltip">
-                            Click the card to see more details or drag to either
-                            side to discard.
+                            Click on the card to see{" "}
+                            <motion.span className="decorated">
+                                more details
+                            </motion.span>{" "}
+                            or drag to either side to discard.
                         </motion.div>
                     </>
                 )}
