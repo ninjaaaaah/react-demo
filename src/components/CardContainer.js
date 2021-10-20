@@ -55,20 +55,27 @@ export default class CardContainer extends React.Component {
         return (
             <AnimatePresence>
                 {profiles && (
-                    <motion.div
-                        id="card-container"
-                        animate={profiles ? shownProfile : hiddenProfile}
-                    >
-                        {profiles &&
-                            profiles.map((profile, i) => (
-                                <Card
-                                    profile={profile}
-                                    key={profile.login.uuid}
-                                    index={i}
-                                    remove={this.removeChild}
-                                />
-                            ))}
-                    </motion.div>
+                    <>
+                        <motion.h1>Card.io</motion.h1>
+                        <motion.div
+                            id="card-container"
+                            animate={profiles ? shownProfile : hiddenProfile}
+                        >
+                            {profiles &&
+                                profiles.map((profile, i) => (
+                                    <Card
+                                        profile={profile}
+                                        key={profile.login.uuid}
+                                        index={i}
+                                        remove={this.removeChild}
+                                    />
+                                ))}
+                        </motion.div>
+                        <motion.div id="tooltip">
+                            Click the card to see more details or drag to either
+                            side to discard.
+                        </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         );

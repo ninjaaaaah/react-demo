@@ -7,9 +7,7 @@ export default class App extends React.Component {
     render() {
         return (
             <>
-                <motion.div id="container">
-                    <Button content="GENERATE" />
-                </motion.div>
+                <Button content="GENERATE" />
                 <CardContainer />
             </>
         );

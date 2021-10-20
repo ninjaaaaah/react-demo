@@ -1,5 +1,5 @@
-// @import url(https://fonts.googleapis.com/css?family=Raleway:500);
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:500);
+@import url(https://fonts.googleapis.com/css2?family=Eczar:wght@500&display=swap);
 // SASS variables
 $maincolor: rgb(255, 89, 89);
 $accentcolor: blue;
@@ -15,14 +15,6 @@ body {
 #app {
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-}
-
-#container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -157,4 +149,15 @@ nav {
 
 #details > span {
     margin: 10px 20px;
+}
+
+#tooltip {
+    margin-top: 6em;
+}
+
+h1 {
+    font-family: "Eczar";
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 0;
 }
